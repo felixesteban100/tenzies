@@ -1,38 +1,208 @@
-.App {
+*{
+  /* variables */
+  --main-color: #060345;
+  --secondary-color: #b8c0d9;
+  --die: white;
+  --dot: black;
+  --counter: white;
+  --third-color: #5c4aff;
+  --die-held: #59cae3;
+  --dot-held: white; 
+}
+
+
+body {
+  margin: 0;
+  background-color: var(--main-color);
+  padding: 20px;
+  font-family: 'Karla', sans-serif;
+}
+
+main {
+  margin: 20px auto;
+  background-color: var(--secondary-color);
+  height: 70vh;
+  width: 80vw;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.title {
+  font-size: 70px;
+  margin: 0;
+}
+
+.instructions {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  margin-top: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dice-container {
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.die-face {
+  height: 150px;
+  width: 150px;
+  background-color: var(--die);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: var(--dot);
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.die-face-held {
+  height: 150px;
+  width: 150px;
+  background-color: var(--die-held);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: var(--dot-held);
+  
+}
+
+.die-num {
+  font-size: 3rem;
+}
+
+.roll-dice {
+  height: 100px;
+  width: 350px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--main-color);
+  color: white;
+  font-size: 3rem;
+  font-family: 'Karla', sans-serif;
+  cursor: pointer;
+}
+
+.roll-dice:focus {
+  outline: none;
+}
+
+.roll-dice:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.top{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.mode {
+  height: 100px;
+  width: 450px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--third-color);
+  color: black;
+  font-size: 3rem;
+  font-family: 'Karla', sans-serif;
+  cursor: pointer;
+}
+
+.counter{
+  font-size: 2rem;
+  color: var(--counter);
+}
+
+
+/* DICE */
+
+.dice {
+  padding: 4px;
+  background-color: var(--die);
+  width: 100%;
+  height: 95%;
+  border-radius: 10%;
+}
+
+.dice-held {
+  padding: 4px;
+  background-color: var(--die-held);
+  width: 100%;
+  height: 95%;
+  border-radius: 10%;
+}
+
+.dot{
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color:var(--dot);
+}
+
+.dot-held{
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--dot-held);
+}
+
+
+.first-face {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-face{
+  display: flex ;
+  justify-content: space-between;
+}
+
+.second-face .dot:nth-of-type(2) {
+  align-self: flex-end;
+}
+
+.third-face {
+  display: flex;
+  justify-content: space-between;
+}
+
+.third-face .dot:nth-of-type(1) {
+  align-self :flex-end;
+}
+
+.third-face .dot:nth-of-type(2) {
+  align-self :center;
+}
+
+
+.fourth-face , .sixth-face, .fifth-face{
+  display: flex;
+  justify-content: space-between;
+}
+
+.fourth-face .column , .sixth-face .column, .fifth-face .column{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+
+.fifth-face .column:nth-of-type(2) {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
