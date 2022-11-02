@@ -31,7 +31,7 @@ function App() {
 
   function allNewDice(){
     const newDice = []
-    for(let i = 0; i < 10; i++){
+    for(let i = 0; i < 15; i++){
       newDice.push(generateNewDice())
     }
     return newDice
@@ -86,7 +86,7 @@ function App() {
         </button>
 
         <div className='counter'>
-          <h2>Number of rolls: {rollTimes}</h2>
+          <h2 className='counter--text'>Number of rolls: {rollTimes}</h2>
         </div>
       </div>
 
