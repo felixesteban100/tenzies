@@ -169,6 +169,8 @@ main {
   align-items: center;
 }
 
+
+
 .second-face{
   display: flex ;
   justify-content: space-between;
@@ -177,6 +179,12 @@ main {
 .second-face .dot:nth-of-type(2) {
   align-self: flex-end;
 }
+
+.second-face .dot-held:nth-of-type(2) {
+  align-self: flex-end;
+}
+
+
 
 .third-face {
   display: flex;
@@ -191,6 +199,14 @@ main {
   align-self :center;
 }
 
+.third-face .dot-held:nth-of-type(1) {
+  align-self :flex-end;
+}
+
+.third-face .dot-held:nth-of-type(2) {
+  align-self :center;
+}
+
 
 .fourth-face , .sixth-face, .fifth-face{
   display: flex;
@@ -202,6 +218,8 @@ main {
   flex-direction: column;
   justify-content: space-between;
 }
+
+
 
 .fifth-face .column:nth-of-type(2) {
   justify-content: center;
